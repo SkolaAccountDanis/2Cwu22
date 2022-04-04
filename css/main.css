@@ -43,6 +43,7 @@ body{
     display: grid;
     font-family: GalaxyEdgeCursive;
     background-image: url("/img/Backgorund.gif");
+    overflow-x: hidden;
     height: 100vh;
     width: calc(100vw - 30px);
     row-gap: 10px;
@@ -101,12 +102,22 @@ body{
 
 header{
     grid-area: hd;
-    margin-left: 200px;
-    margin-right: 200px;
+    align-self: center;
     background-color: grey;
     border-style: solid;
     border-color: white;
     text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+
+#logo{
+    max-width:100%;
+    max-height:100%;
+    
 }
 
 header p{
@@ -156,7 +167,6 @@ nav{
 }
 
 #pixelearth{
-    color: aqua;
     background-image: url(/img/pixelearth.png);
     width: 100%;
     height: 100%;
@@ -207,6 +217,23 @@ main{
     
 }
 
+#PicAsideEarth{
+    width: 100%;
+    height: 60%;
+}
+#PicAsideMars{
+    width: 40%;
+    height: 30%;
+}
+#PicAsideSaturn{
+    width: 100%;
+    height: 60%;
+}
+#PicAsideUranus{
+    width: 100%;
+    height: 60%;
+}
+
 #main4:hover > #textmain4{
     display:block;
 
@@ -227,6 +254,8 @@ main:hover > #textmain{
     display:block;
 
 }
+
+@media(hover: hover) and (pointer: fine) {
 
 main:hover{
     transition-duration: 0.3s;
@@ -255,6 +284,8 @@ main:hover{
     background: rgba(4, 0, 35, 0.802);    
     border: 5px solid white;
     background-size: 30%;
+}
+
 }
 
 #main2{
@@ -335,13 +366,13 @@ footer{
     
     body{
         display: grid;
-        background-color: aqua;
+        background-color: black;
         height: 100vh;
         width: calc(100vw - 20px);
         row-gap: 10px;
         column-gap: 10px;
         overflow: scroll;
-        grid-template-rows: 20% 10% 40% 30%;
+        grid-template-rows: 10% 15% 65% 10%;
         grid-template-columns: auto;
         grid-template-areas:
         "hd"
@@ -350,12 +381,29 @@ footer{
         "ft"
         ;
     }
+
+    #PicAsideEarth{
+        width: 140%;
+        height: 60%;
+    }
+    #PicAsideMars{
+        width: 80%;
+        height: 30%;
+    }
+    #PicAsideSaturn{
+        width: 80%;
+        height: 30%;
+    }
+    #PicAsideUranus{
+        width: 100%;
+        height: 40%;
+    }
+
     main:hover{
         transition-duration: 0.3s;
         background: rgba(4, 0, 35, 0.802);    
         border: 5px solid white;
         background-size: 30%;
-    
     }
     
     #main2:hover{
@@ -372,6 +420,11 @@ footer{
         background-size: 50%;
     }
     
+    .hover {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;        
+    }
+
     #main4:hover{
         transition-duration: 0.3s;
         background: rgba(4, 0, 35, 0.802);    
@@ -384,15 +437,15 @@ footer{
 
     }
 
-    #mobileheader{
-        display: block;
-        
-    
+
+    header p{
+        font-size: 30px;
+        align-self: center;
+        margin: 10px;
     }
 
-    #desktopheader{
-        display: none;
-    }
+  
+
     #textmain{
         margin: auto;
         border-color: pink;
